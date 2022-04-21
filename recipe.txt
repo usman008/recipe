@@ -1,0 +1,83 @@
+import 'recipe.dart';
+
+main() {
+  List<Recipe> lst = [];
+  Recipe recipe = Recipe(
+      id: '1',
+      title: 'Softest Gluten Free Dinner Rolls',
+      imageUrl:
+          'https://theloopywhisk.com/wp-content/uploads/2022/03/Gluten-Free-Dinner-Rolls_730px-7_1.jpg',
+      duration: 4,
+      ingredients: ['Active dried yeast.', 'Sugar', "Warm whole milk"],
+      steps: [
+        'Divide the dough into 9 equal pieces.',
+        'Flatten one piece of dough.',
+        'Take the corners and bring them in towards the middle'
+      ],
+      isGlutenFree: true,
+      isVegan: true,
+      isVegetarian: false,
+      isLactoseFree: true);
+
+  Recipe recipe2 = Recipe(
+      id: '2',
+      title: 'Vegan Lasagna',
+      imageUrl:
+          'https://www.wikihow.com/images/thumb/6/6a/Make-Gluten%E2%80%90Free-Vegan-Lasagna-Step-1.jpg/aid8260473-v4-728px-Make-Gluten%E2%80%90Free-Vegan-Lasagna-Step-1.jpg.webp',
+      duration: 4,
+      ingredients: ['32 ounces pasta', 'vegan cheese', 'Garlic', 'large onion'],
+      steps: ['Chop your vegetables.', 'Cook your pasta', 'Spread your sauce'],
+      isGlutenFree: true,
+      isVegan: true,
+      isVegetarian: false,
+      isLactoseFree: true);
+  Recipe recipe3 = Recipe(
+      id: '3',
+      title: 'Vegan Lasagna',
+      imageUrl:
+          'https://www.wikihow.com/images/thumb/6/6a/Make-Gluten%E2%80%90Free-Vegan-Lasagna-Step-1.jpg/aid8260473-v4-728px-Make-Gluten%E2%80%90Free-Vegan-Lasagna-Step-1.jpg.webp',
+      duration: 4,
+      ingredients: ['32 ounces pasta', 'vegan cheese', 'Garlic', 'large onion'],
+      steps: ['Chop your vegetables.', 'Cook your pasta', 'Spread your sauce'],
+      isGlutenFree: true,
+      isVegan: true,
+      isVegetarian: false,
+      isLactoseFree: true);
+
+  lst.add(recipe);
+  lst.add(recipe2);
+  lst.add(recipe3);
+
+  for (int i = 0; i < lst.length; i++) {
+    print(lst[i]);
+  }
+}
+
+
+
+import 'dart:io';
+
+class Recipe {
+  final String id;
+  final String title;
+  final String imageUrl;
+  final int duration;
+  final List<String> ingredients;
+  final List<String> steps;
+  final bool isGlutenFree;
+  final bool isVegan;
+  final bool isVegetarian;
+  final bool isLactoseFree;
+
+  Recipe(
+      {required this.id,
+      required this.title,
+      required this.imageUrl,
+      required this.duration,
+      required this.ingredients,
+      required this.steps,
+      required this.isGlutenFree,
+      required this.isVegan,
+      required this.isVegetarian,
+      required this.isLactoseFree});
+}
